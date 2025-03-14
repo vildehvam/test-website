@@ -82,63 +82,82 @@ nav a:hover {
     text-transform: uppercase;
 }
 
+/* Projects Grid */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    margin-top: 30px;
-    padding: 0 10%; /* This makes sure the grid has the same padding as the "About Me" section */
+    margin-top: 60px; /* Increase the space between 'About Me' and 'My Projects' */
+    padding: 0 10%; /* Align with About Me section */
 }
 
 /* Project Card Styling */
 .project {
-    background: #F2F4F5;
-    padding: 0;                    /* No padding for the project card */
+    position: relative;
+    padding: 0; /* Remove padding so no extra space is added */
+    overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;              /* Hide the overflowing title */
-    position: relative;            /* Needed for title positioning */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 400px; /* Make project cards taller */
 }
 
-/* Image Styling */
-.project img {
-    width: 100%;                   /* Full width of the card */
-    height: 250px;                 /* Set a fixed height for the image */
-    object-fit: cover;             /* Ensure the image covers the area without distorting */
-    border-radius: 10px 10px 0 0;  /* Optional: Rounded top corners */
-}
-
-/* Title Styling (Hidden by Default) */
-.project h3 {
-    position: absolute;            /* Absolute positioning */
-    top: 50%;                      /* Center vertically */
-    left: 50%;                     /* Center horizontally */
-    transform: translate(-50%, -50%); /* Centered in both axes */
-    color: white;                  /* White text for visibility */
-    font-size: 22px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0;                    /* Hidden by default */
-    transition: opacity 0.3s ease; /* Smooth fade-in effect */
-}
-
-/* Hover Effect: Show Title */
 .project:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.project:hover h3 {
-    opacity: 1;                    /* Show title when hovering */
+/* Project Image Styling */
+.project img {
+    width: 100%;
+    height: 100%; /* Make the image fill the entire height of the card */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+    border-radius: 10px; /* Match the border radius */
 }
 
+/* Blurring Effect on Hover */
+.project::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.6); /* Light overlay */
+    backdrop-filter: blur(8px); /* Apply blur effect */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px; /* Match the image's border radius */
+}
+
+/* Title Styling on Hover */
+.project h3 {
+    position: absolute;
+    bottom: 20px; /* Position the title at the bottom of the card */
+    left: 20px; /* Space from the left */
+    color: white; /* White text color */
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    z-index: 1; /* Ensure title appears on top of the blur effect */
+    visibility: hidden; /* Initially hidden */
+    transition: visibility 0.3s ease; /* Smooth visibility transition */
+}
+
+/* Show blur and title on hover */
+.project:hover::after {
+    opacity: 1; /* Show the blur effect */
+}
+
+.project:hover h3 {
+    visibility: visible; /* Show the title */
+}
 /* Contact Section */
 #contact p {
     font-size: 18px;
     font-weight: 500;
     margin-top: 10px;
+    text-align: left;
 }
 
 /* Footer */
