@@ -1,3 +1,86 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Peridot PE', sans-serif;
+}
+
+body {
+    background: white;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: white;
+    padding: 20px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #7A6AFF;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    background: url('images/alluring.png') center/cover no-repeat; /* Set background image */
+    color: white; /* Text color to be visible on the background */
+    text-align: center; /* Center align the text */
+}
+
+.hero h2 {
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#about {
+    background: #F2F4F5;  /* Grey background */
+    padding: 80px 10%;     /* Adjust padding as needed */
+    text-align: left;
+}
+
+#about h2,
+#projects h2,
+#contact h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
 /* Projects Grid */
 .projects-grid {
     display: grid;
@@ -48,4 +131,21 @@
 
 .project:hover h3 {
     opacity: 1;                    /* Show title when hovering */
+}
+
+/* Contact Section */
+#contact p {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background: #F2F4F5;
+    padding: 20px;
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
 }
