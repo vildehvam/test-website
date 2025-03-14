@@ -81,6 +81,14 @@ nav a:hover {
     margin-bottom: 20px;
     text-transform: uppercase;
 }
+#projects h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: left; /* Left align the title */
+    padding-left: 10%; /* Optional: Adds spacing from the left side */
+}
 
 /* Projects Grid */
 .projects-grid {
