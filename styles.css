@@ -57,6 +57,7 @@ nav a:hover {
     background: url('images/alluring.png') center/cover no-repeat; /* Set background image */
     color: white; /* Text color to be visible on the background */
     text-align: center; /* Center align the text */
+    margin-bottom: 100px;
 }
 
 .hero h2 {
@@ -71,6 +72,7 @@ nav a:hover {
     background: #F2F4F5;  /* Grey background */
     padding: 80px 10%;     /* Adjust padding as needed */
     text-align: left;
+    margin-bottom: 100px;
 }
 
 #about h2,
@@ -97,6 +99,7 @@ nav a:hover {
     gap: 30px;
     margin-top: 60px; /* Increase the space between 'About Me' and 'My Projects' */
     padding: 0 10%; /* Align with About Me section */
+    margin-bottom: 100px;
 }
 
 /* Project Card Styling */
@@ -164,7 +167,8 @@ nav a:hover {
 #contact p {
     font-size: 18px;
     font-weight: 500;
-    margin-top: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 /* Footer */
