@@ -1,0 +1,5 @@
+/my-project
+    /images
+        hero-bg.png   <-- Correct image file here
+    index.html
+    styles.css
