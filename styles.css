@@ -54,7 +54,7 @@ nav a:hover {
     display: flex;
     align-items: center; /* Vertically center the content */
     justify-content: center; /* Horizontally center the content */
-    background: url('images/hero-bg.png') center/cover no-repeat; /* Set background image */
+    background: url('images/alluring.png') center/cover no-repeat; /* Set background image */
     color: white; /* Text color to be visible on the background */
     text-align: center; /* Center align the text */
 }
