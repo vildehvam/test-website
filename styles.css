@@ -57,7 +57,7 @@ nav a:hover {
     background: url('images/alluring.png') center/cover no-repeat; /* Set background image */
     color: white; /* Text color to be visible on the background */
     text-align: center; /* Center align the text */
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .hero h2 {
@@ -113,6 +113,7 @@ nav a:hover {
     height: 400px; /* Make project cards taller */
 }
 
+/* Hover Effect for Project Card */
 .project:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
@@ -141,7 +142,7 @@ nav a:hover {
     border-radius: 10px; /* Match the image's border radius */
 }
 
-/* Title Styling on Hover */
+/* Title Styling */
 .project h3 {
     position: absolute;
     bottom: 20px; /* Position the title at the bottom of the card */
@@ -150,9 +151,10 @@ nav a:hover {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 24px;
-    z-index: 1; /* Ensure title appears on top of the blur effect */
+    z-index: 1; /* Ensure title appears on top of the image */
     visibility: hidden; /* Initially hidden */
-    transition: visibility 0.3s ease; /* Smooth visibility transition */
+    opacity: 0; /* Initially hidden with opacity 0 */
+    transition: visibility 0.3s ease, opacity 0.3s ease; /* Smooth transition */
 }
 
 /* Show blur and title on hover */
@@ -161,8 +163,11 @@ nav a:hover {
 }
 
 .project:hover h3 {
-    visibility: visible; /* Show the title */
+    visibility: visible; /* Make the title visible */
+    opacity: 1; /* Make the title fully opaque */
 }
+
+
 /* Contact Section */
 #contact p {
     font-size: 18px;
