@@ -147,7 +147,7 @@ nav a:hover {
     position: absolute;
     bottom: 20px; /* Position the title at the bottom of the card */
     left: 20px; /* Space from the left */
-    color: white; /* White text color */
+    color: black; /* White text color */
     text-transform: uppercase;
     font-weight: 700;
     font-size: 24px;
