@@ -50,13 +50,13 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 100vh; /* Full viewport height */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url('images/hero-bg.jpg') center/cover no-repeat;
-    color: white;
-    text-align: center;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    background: url('images/hero-bg.png') center/cover no-repeat; /* Set background image */
+    color: white; /* Text color to be visible on the background */
+    text-align: center; /* Center align the text */
 }
 
 .hero h2 {
